@@ -1,3 +1,5 @@
+'use client';
+
 import {
   Sidebar,
   SidebarContent,
@@ -7,12 +9,14 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
+  useSidebar,
 } from '@/components/ui/sidebar';
 import { sidebarItems } from '@/lib/sidebar-items';
 import { Button } from '../ui/Button';
 import { PersonStanding } from 'lucide-react';
 
 export function AppSidebar() {
+  const { toggleSidebar, open } = useSidebar();
   return (
     <Sidebar>
       <SidebarHeader className="flex items-center">Storify</SidebarHeader>
@@ -34,7 +38,12 @@ export function AppSidebar() {
       </SidebarContent>
       <SidebarFooter>
         <SidebarMenu>
-          <SidebarMenuItem className="flex justify-center m-2"></SidebarMenuItem>
+          <SidebarMenuItem className="flex justify-center m-2">
+            <Button className="w-full hover:bg-white hover:border-2 hover:border-black hover:text-black p-2">
+              <PersonStanding />
+              {!open ? null : <span>Username</span>}
+            </Button>
+          </SidebarMenuItem>
         </SidebarMenu>
       </SidebarFooter>
     </Sidebar>
