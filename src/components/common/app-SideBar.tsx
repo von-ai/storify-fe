@@ -9,6 +9,7 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
+  SidebarTrigger,
   useSidebar,
 } from '@/components/ui/sidebar';
 import { sidebarItems } from '@/lib/sidebar-items';
@@ -16,10 +17,21 @@ import { Button } from '../ui/Button';
 import { PersonStanding } from 'lucide-react';
 
 export function AppSidebar() {
-  const { toggleSidebar, open } = useSidebar();
+  const { open } = useSidebar();
   return (
     <Sidebar>
-      <SidebarHeader className="flex items-center">Storify</SidebarHeader>
+      <section>
+        {!open ? (
+          <SidebarTrigger />
+        ) : (
+          <div className="grid grid-cols-5">
+            <SidebarHeader className="flex col-span-4 justify-center items-center">
+              Storify
+            </SidebarHeader>
+            <SidebarTrigger className="flex justify-center items-center hover:text-white hover:bg-black transition ease-in-out duration-300" />
+          </div>
+        )}
+      </section>
       <SidebarContent>
         <SidebarGroup />
         {sidebarItems.map((item) => (

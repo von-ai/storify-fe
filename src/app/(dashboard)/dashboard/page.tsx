@@ -1,10 +1,11 @@
 import React from 'react';
+import DashboardPage from '@/components/pages/DashboardPage';
 
 const page = () => {
   return (
-    <div>
-      <h1>Hello world 1123</h1>
-    </div>
+    <section>
+      <DashboardPage />
+    </section>
   );
 };
 

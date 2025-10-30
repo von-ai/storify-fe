@@ -3,11 +3,12 @@ import { AppSidebar } from '@/components/common/app-SideBar';
 
 const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <SidebarProvider>
-      <AppSidebar />
-      <SidebarTrigger />
-      <main>{children}</main>
-    </SidebarProvider>
+    <main>
+      <SidebarProvider>
+        <AppSidebar />
+        <main>{children}</main>
+      </SidebarProvider>
+    </main>
   );
 };
 
