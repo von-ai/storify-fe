@@ -1,3 +1,4 @@
+import { Button } from '@/components/ui/Button';
 import {
   Table,
   TableBody,
@@ -7,6 +8,7 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
+import { tabelDatas } from '@/data/tabel-dashboard';
 
 import React from 'react';
 
@@ -15,22 +17,29 @@ const TableStock = () => {
     <section>
       <Table>
         <TableHeader>
-          <TableRow>
-            <TableHead className="w-[100px]">Invoice</TableHead>
-            <TableHead>Status</TableHead>
-            <TableHead>Method</TableHead>
-            <TableHead className="text-right">Amount</TableHead>
+          <TableRow className="hover:bg-gray-900 transition ease-in-out duration-300">
+            <TableHead>ID</TableHead>
+            <TableHead>Nama Barang</TableHead>
+            <TableHead>Kategori</TableHead>
+            <TableHead>Stock Barang</TableHead>
+            <TableHead>Tanggal Update</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
-          <TableRow>
-            <TableCell className="font-medium">INV001</TableCell>
-            <TableCell>Paid</TableCell>
-            <TableCell>Credit Card</TableCell>
-            <TableCell className="text-right">$250.00</TableCell>
-          </TableRow>
+          {tabelDatas.slice(0, 5).map((data) => (
+            <TableRow className="hover:bg-gray-100 transition ease-in-out duration-10">
+              <TableCell className="font-medium">{data.id}</TableCell>
+              <TableCell>{data.nama}</TableCell>
+              <TableCell>{data.kategori}</TableCell>
+              <TableCell>{data.stock}</TableCell>
+              <TableCell>{data.tanggal.toLocaleDateString()}</TableCell>
+            </TableRow>
+          ))}
         </TableBody>
       </Table>
+      <div className="flex justify-end my-3">
+        <Button>Lihat Selengkapnya</Button>
+      </div>
     </section>
   );
 };
