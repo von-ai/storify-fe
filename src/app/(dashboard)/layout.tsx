@@ -1,14 +1,14 @@
-import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar';
+'use client';
+import { SidebarProvider, useSidebar } from '@/components/ui/sidebar';
 import { AppSidebar } from '@/components/common/app-SideBar';
 
 const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
+  // const { open } = useSidebar();
   return (
-    <main>
-      <SidebarProvider>
-        <AppSidebar />
-        <main>{children}</main>
-      </SidebarProvider>
-    </main>
+    <SidebarProvider>
+      <AppSidebar />
+      <main className="min-w-[83.2vw] pr-8">{children}</main>
+    </SidebarProvider>
   );
 };
 
