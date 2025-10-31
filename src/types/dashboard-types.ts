@@ -5,3 +5,11 @@ export interface DashboardCardProps {
   quantity: number;
   text: string;
 }
+
+export type TabelTypes = {
+  id: string;
+  nama: string;
+  kategori: string;
+  stock: number;
+  tanggal: Date;
+};
