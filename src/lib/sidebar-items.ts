@@ -3,7 +3,7 @@ import { Home, Package, Settings, Users } from 'lucide-react';
 export const sidebarItems = [
   {
     title: 'Dashboard',
-    url: '#',
+    url: '/dashboard',
     icon: Home,
   },
   {

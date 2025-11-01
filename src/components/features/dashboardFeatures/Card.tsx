@@ -3,7 +3,7 @@ import { DashboardCardProps } from '@/types/dashboard-types';
 
 const Card = ({ icon: Icon, quantity, text }: DashboardCardProps) => {
   return (
-    <section className="w-auto h-auto bg-white text-center py-5 px-10 space-y-3 shadow rounded-2xl">
+    <section className="w-auto h-auto bg-white text-center py-5 px-10 space-y-3 shadow rounded-2xl transform transition duration-300 hover:scale-105 hover:shadow-lg">
       <div className="flex justify-center">
         <Icon width={50} height={50} />
       </div>
