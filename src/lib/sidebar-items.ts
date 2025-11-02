@@ -8,7 +8,7 @@ export const sidebarItems = [
   },
   {
     title: 'Storage',
-    url: '#',
+    url: '/storage',
     icon: Package,
   },
   {
