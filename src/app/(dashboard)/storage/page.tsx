@@ -1,9 +1,10 @@
 import React from 'react';
+import StoragePage from '@/components/pages/StoragePage';
 
 const page = () => {
   return (
     <>
-      <h1>Hello world</h1>
+      <StoragePage />
     </>
   );
 };
