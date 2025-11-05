@@ -23,7 +23,7 @@ export const columns: ColumnDef<TabelTypes>[] = [
     header: 'Tanggal Update',
   },
   {
-    accessorKey: 'id',
+    accessorKey: 'action',
     header: 'Action',
   },
 ];

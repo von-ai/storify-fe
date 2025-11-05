@@ -20,10 +20,11 @@ import { tabelDatas } from '@/data/tabel-dashboard';
 import { columns } from '@/lib/colums';
 
 interface TabelStorageProps {
-  key: string;
+  storageKey: string;
 }
 
-const TabelStorage: React.FC<TabelStorageProps> = ({ key: KeyStorage }) => {
+const TabelStorage = () => {
+  // const TabelStorage: React.FC<TabelStorageProps> = ({ storageKey }) => {
   const table = useReactTable({
     data: tabelDatas,
     columns,
