@@ -4,7 +4,7 @@ import { TabelStorage } from '../features/storage';
 
 const Storagepage = () => {
   return (
-    <section className="space-y-2">
+    <section className="space-y-6">
       <div className="flex justify-between">
         <h1 className="text-2xl font-bold">Storage</h1>
         <Button>+ Tambah Barang</Button>

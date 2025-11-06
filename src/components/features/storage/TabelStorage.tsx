@@ -24,7 +24,6 @@ interface TabelStorageProps {
 }
 
 const TabelStorage = () => {
-  // const TabelStorage: React.FC<TabelStorageProps> = ({ storageKey }) => {
   const table = useReactTable({
     data: tabelDatas,
     columns,
