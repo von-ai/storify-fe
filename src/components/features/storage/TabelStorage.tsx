@@ -19,10 +19,6 @@ import { Button } from '@/components/ui/Button';
 import { tabelDatas } from '@/data/tabel-dashboard';
 import { columns } from '@/lib/colums';
 
-interface TabelStorageProps {
-  storageKey: string;
-}
-
 const TabelStorage = () => {
   const table = useReactTable({
     data: tabelDatas,
