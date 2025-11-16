@@ -22,7 +22,7 @@ export function AppSidebar() {
     <Sidebar>
       <section>
         {!open ? (
-          <SidebarTrigger />
+          <SidebarTrigger className="hover:bg-black hover:text-white transition ease-in-out duration-300" />
         ) : (
           <div className="grid grid-cols-5">
             <SidebarHeader className="flex col-span-4 justify-center items-center">
