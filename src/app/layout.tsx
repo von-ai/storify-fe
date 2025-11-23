@@ -9,7 +9,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: 'Storify',
-  description: 'Manage your storage with efficient web app',
+  description: 'Manage your storage with efficient web app. Created by Von Ai',
 };
 
 export default function RootLayout({
@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="id">
       <body className={`${inter.variable} antialiased`}>{children}</body>
     </html>
   );
